@@ -44,13 +44,13 @@ export const mdPlugin = (md: MarkdownIt) => {
           sourceFile = sourceFile.replace("/", "-");
         }
         if (!source) throw new Error(`Incorrect source file: ${sourceFile}`);
-        return `<vp-demo source="${encodeURIComponent(
+        return `<vp-container source="${encodeURIComponent(
           highlight(source, "vue")
         )}" path="${sourceFile}" description="${encodeURIComponent(
           localMd.render(description)
         )}">`;
       } else {
-        return "</vp-demo>";
+        return "</vp-container>";
       }
     },
   } as ContainerOpts);

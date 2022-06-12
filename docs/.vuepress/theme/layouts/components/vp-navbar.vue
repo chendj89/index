@@ -7,7 +7,7 @@ const siteData = useSiteData();
   <div class="navbar-wrapper">
     <div class="header-container">
       <div class="logo-container">
-        <router-link :to="siteData.base">
+        <router-link :to="'/'">
           <div class="site-name"> {{ siteData.title }}</div>
         </router-link>
       </div>

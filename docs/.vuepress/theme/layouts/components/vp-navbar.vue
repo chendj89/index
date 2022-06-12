@@ -1,15 +1,17 @@
 <script setup lang="ts">
-
+import { useSiteData } from "@vuepress/client";
+const siteData = useSiteData();
 </script>
 
 <template>
   <div class="navbar-wrapper">
     <div class="header-container">
       <div class="logo-container">
-        标题
+        <a :href="siteData.base">
+          <div class="site-name"> {{ siteData.title }}</div>
+        </a>
       </div>
       <div class="content">
-
       </div>
     </div>
   </div>
@@ -22,7 +24,6 @@
   height: var(--header-height);
 
   >a {
-    height: 28px;
     width: 128px;
   }
 

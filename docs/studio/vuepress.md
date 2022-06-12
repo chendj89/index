@@ -1,7 +1,6 @@
 # vuepress
 
 <!-- 配置vuepress2 -->
-@[code](../.vuepress/config.ts)
+<img src="@public/hzw.jpeg" alt="" width="100">
 
-<!-- vue3监听组件mounted和updated事件 -->
-@[code{3-3}](../.vuepress/components/cc-doc-content.vue)
+@[code](@docs/global.d.ts)

@@ -8,7 +8,6 @@ import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { mdPlugin } from "./md";
 // 自定义主题
 import { chenccTheme } from "./theme";
-
 export default defineUserConfig({
   base: process.env.NODE_ENV !== "production" ? "/" : "/index/",
   lang: "zh-CN",
@@ -17,8 +16,18 @@ export default defineUserConfig({
   theme: chenccTheme({
     // 默认主题配置项
   }),
+  alias: {
+    "@docs": path.resolve(__dirname, ".."),
+    "@public": path.join(__dirname, "/public"),
+  },
   // md配置
   markdown: {
+    importCode: {
+      handleImportPath: (str) => {
+        // 代码段支持@docs
+        return str.replace(/^@docs/, path.resolve(__dirname, ".."));
+      },
+    },
     code: {
       // 关闭序号
       lineNumbers: false,

@@ -1,7 +1,8 @@
 <template>
   <div class="app">
     <vp-nav></vp-nav>
-    <vp-content></vp-content>
+    <vp-slidebar></vp-slidebar>
+    <vp-content :class="{ 'has-sidebar': true }"></vp-content>
   </div>
 </template>
 

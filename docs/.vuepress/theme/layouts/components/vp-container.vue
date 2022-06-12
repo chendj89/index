@@ -1,5 +1,5 @@
 <template>
-  <div class="vp-container">
+  <div class="vp-container" :data-name="path">
     <vp-demo v-bind="props"></vp-demo>
   </div>
 </template>

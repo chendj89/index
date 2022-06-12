@@ -1,0 +1,32 @@
+{
+  "name": "index",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.47"
+  },
+  "scripts": {
+    "docs:dev": " vuepress dev docs",
+    "docs:build": " vuepress build docs"
+  },
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.0.4",
+    "@iconify-json/ri": "^1.1.2",
+    "@types/escape-html": "^1.0.2",
+    "@types/js-beautify": "^1.13.3",
+    "@types/markdown-it-container": "^2.0.5",
+    "@types/prismjs": "^1.26.0",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.47",
+    "@vueuse/core": "^8.6.0",
+    "ant-design-vue": "^3.2.6",
+    "element-plus": "^2.2.5",
+    "escape-html": "^1.0.3",
+    "js-beautify": "^1.14.3",
+    "prism-theme-vars": "^0.2.3",
+    "unocss": "^0.38.2",
+    "unplugin-icons": "^0.14.3",
+    "unplugin-vue-components": "^0.19.6"
+  }
+}

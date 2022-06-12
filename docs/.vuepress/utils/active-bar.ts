@@ -14,6 +14,7 @@ export function useActiveSidebarLinks(
 
     if (
       anchors.length &&
+      window.scrollY &&
       window.scrollY + window.innerHeight === document.body.offsetHeight
     ) {
       activateLink(anchors[anchors.length - 1].hash);
@@ -46,10 +47,11 @@ export function useActiveSidebarLinks(
         : (container.value.querySelector(
             `.toc-item a[href="${decodeURIComponent(hash)}"]`
           ) as HTMLAnchorElement));
+
     if (activeLink) {
       activeLink.classList.add("active");
       marker.value.style.opacity = "1";
-      marker.value.style.top = `${activeLink.offsetTop}px`;
+      marker.value.style.top = `${activeLink.offsetTop + 2}px`;
     } else {
       marker.value.style.opacity = "0";
       marker.value.style.top = "33px";

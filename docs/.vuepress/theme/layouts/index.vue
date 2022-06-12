@@ -1,6 +1,8 @@
 <script setup lang="ts">
 </script>
 <template>
-  <vp-app></vp-app>
+  <ClientOnly>
+    <vp-app></vp-app>
+  </ClientOnly>
 </template>
 

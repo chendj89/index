@@ -7,9 +7,9 @@ const siteData = useSiteData();
   <div class="navbar-wrapper">
     <div class="header-container">
       <div class="logo-container">
-        <a :href="siteData.base">
+        <router-link :to="siteData.base">
           <div class="site-name"> {{ siteData.title }}</div>
-        </a>
+        </router-link>
       </div>
       <div class="content">
       </div>

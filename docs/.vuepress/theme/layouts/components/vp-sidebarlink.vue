@@ -16,12 +16,12 @@ defineEmits(['close'])
 </script>
 
 <template>
-  <a :class="{
+  <router-link :class="{
     link: true,
     'flex items-center': item.promotion,
-  }" :href="item.link" @click="$emit('close')">
+  }" :to="item.link" @click="$emit('close')">
     <p class="link-text">{{ item.text }}</p>
-  </a>
+  </router-link>
 </template>
 
 <style scoped lang="scss">

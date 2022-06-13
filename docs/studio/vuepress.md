@@ -6,4 +6,8 @@
 @[code](@docs/global.d.ts)
 
 
-<a href="https://chendj89.github.io/index/assets/hzw.3466fb7a.jpeg" target="_blank" download="hzw.3466fb7a.jpeg">海贼王</a>
+<vp-download href="https://www.shenyehd.com/src/img/logo.png" download="hzw.3466fb7a.jpeg">
+  <img src="https://www.shenyehd.com/src/img/logo.png" />
+</vp-download>
+
+<a href="https://www.shenyehd.com" target="_blank">深夜互动</a>

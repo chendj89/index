@@ -19,6 +19,12 @@ let code = reactive([
     link: "https://staging-cn.vuejs.org/",
   },
 ]);
+let good = reactive([
+  {
+    title: "在线预览制作xmind",
+    link: "https://xiaojuzi.fun/Xminder/edit.html",
+  },
+]);
 
 export default {
   blog,

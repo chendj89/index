@@ -1,5 +1,13 @@
 <script lang="ts" setup>
-
+import { usePageData } from "@vuepress/client";
+const page = usePageData();
+function isActive(page: any, path: any) {
+  if (path === undefined) {
+    return false;
+  }
+  page.path = page.path.replace(".html", "");
+  return page.path === path.link;
+}
 export type Link = {
   text: string
   link: string
@@ -12,12 +20,12 @@ defineProps<{
 }>()
 
 defineEmits(['close'])
-
 </script>
 
 <template>
   <router-link :class="{
     link: true,
+    active: isActive(page, item),
     'flex items-center': item.promotion,
   }" :to="item.link" @click="$emit('close')">
     <p class="link-text">{{ item.text }}</p>

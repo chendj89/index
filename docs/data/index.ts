@@ -24,6 +24,10 @@ let good = reactive([
     title: "在线预览制作xmind",
     link: "https://xiaojuzi.fun/Xminder/edit.html",
   },
+  {
+    title: "BEJSON2011",
+    link: "https://www.bejson.com/",
+  },
 ]);
 let interest = reactive({
   title: "Five动漫",

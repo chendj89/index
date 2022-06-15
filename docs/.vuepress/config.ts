@@ -56,7 +56,6 @@ export default defineUserConfig({
           .replace("theme/layouts/components/", "")
           .replace(".vue", "");
         filename = filename.replace(/\/|\\/g, "-");
-        console.log(filename);
         return filename;
       },
     }),

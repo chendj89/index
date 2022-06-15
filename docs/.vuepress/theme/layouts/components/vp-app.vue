@@ -9,8 +9,6 @@
 <script setup lang="ts">
 import { getCurrentInstance } from "vue";
 let app = getCurrentInstance();
-console.log(app?.appContext.components);
-
 </script>
 
 <style scoped>

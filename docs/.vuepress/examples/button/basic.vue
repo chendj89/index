@@ -1,9 +1,12 @@
 <template>
-  <el-table :data="tableData" border style="width: 100%">
-    <el-table-column prop="date" label="Date" width="180" />
-    <el-table-column prop="name" label="Name" width="180" />
-    <el-table-column prop="address" label="Address" />
-  </el-table>
+  <div>
+    <el-button style="margin-bottom:30px" color="#626aef">自定义颜色</el-button>
+    <el-table :data="tableData" border style="width: 100%">
+      <el-table-column prop="date" label="Date" width="180" />
+      <el-table-column prop="name" label="Name" width="180" />
+      <el-table-column prop="address" label="Address" />
+    </el-table>
+  </div>
 </template>
 
 <script lang="ts" setup>

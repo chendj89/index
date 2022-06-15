@@ -25,12 +25,14 @@ let good = reactive([
     link: "https://xiaojuzi.fun/Xminder/edit.html",
   },
 ]);
-let interest =reactive({
-  title:"Five动漫",
-  link:"https://www.fivedongman.com/"
-})
+let interest = reactive({
+  title: "Five动漫",
+  link: "https://www.fivedongman.com/",
+});
 
 export default {
   blog,
   code,
+  good,
+  interest,
 };

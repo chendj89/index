@@ -12,6 +12,7 @@ const siteData = useSiteData();
         </router-link>
       </div>
       <div class="content">
+        <vp-social-links class="social-links" />
       </div>
     </div>
   </div>

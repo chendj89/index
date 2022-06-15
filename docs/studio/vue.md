@@ -1,5 +1,6 @@
-```js
-//查看当前vue已注册的组件
-// vm 组件实例
-vm._instance.appContext.components
+## 查看已注册组件
+```ts
+import { getCurrentInstance } from "vue";
+let app = getCurrentInstance();
+console.log(app?.appContext.components);
 ```

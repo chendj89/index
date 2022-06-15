@@ -42,14 +42,21 @@ export default defineUserConfig({
       // 组件的根目录为当前目录
       componentsDir: path.join(__dirname),
       // 只有匹配的目录，目录下的组件才会自动注册
-      componentsPatterns: ["examples", "theme/layouts/components"],
+      componentsPatterns: [
+        "examples",
+        "theme/layouts/components",
+        "theme/layouts/components/navbar",
+      ],
       getComponentName: (filename) => {
+        console.log(filename);
         // 修改组件注册名称
         filename = filename
           .replace("examples/", "")
+          .replace("theme/layouts/components/navbar/", "")
           .replace("theme/layouts/components/", "")
           .replace(".vue", "");
         filename = filename.replace(/\/|\\/g, "-");
+        console.log(filename);
         return filename;
       },
     }),

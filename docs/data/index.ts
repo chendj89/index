@@ -28,6 +28,10 @@ let good = reactive([
     title: "BEJSON2011",
     link: "https://www.bejson.com/",
   },
+  {
+    title: "cnpm",
+    link: "https://npmmirror.com/",
+  },
 ]);
 let interest = reactive({
   title: "Five动漫",

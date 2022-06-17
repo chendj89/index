@@ -6,6 +6,9 @@
       <el-table-column prop="name" label="Name" width="180" />
       <el-table-column prop="address" label="Address" />
     </el-table>
+    <div class="hero">
+      <div class="hero-name">123</div>
+    </div>
   </div>
 </template>
 
@@ -33,3 +36,10 @@ const tableData = [
   },
 ]
 </script>
+<style lang="scss" scoped>
+.hero {
+  ::v-deep &-name {
+    color: red;
+  }
+}
+</style>

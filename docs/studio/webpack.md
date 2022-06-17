@@ -1,5 +1,14 @@
 ## 配置webpack中的chainWebpack
 
+```json
+//指定版本
+ {
+    "sass": "^1.52.3",
+    "sass-loader": "^10.1.1",
+    "string-replace-loader": "^3.1.0",
+  }
+```
+
 ```js
 // 引入模块
 const StringReplacePlugin = require("string-replace-loader");

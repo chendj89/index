@@ -20,6 +20,10 @@ let sidebars = [
         "link": "/studio/vue",
         "text": "vue"
       },
+      {
+        "link": "/studio/webpack",
+        "text": "webpack"
+      },
     ]
   }
 ]

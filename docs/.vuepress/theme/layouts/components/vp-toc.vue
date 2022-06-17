@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useActiveSidebarLinks } from "../../../utils/active-bar";
-import { useToc } from '../../../utils/use-toc';
+import { useActiveSidebarLinks } from "@docs/.vuepress/utils/active-bar";
+import { useToc } from '@docs/.vuepress/utils/use-toc';
 const marker = ref()
 const container = ref()
 const headers = useToc()

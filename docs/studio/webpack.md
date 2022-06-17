@@ -1,4 +1,4 @@
-## 配置webpack中的chainWebpack
+## 配置webpack
 
 ```json
 //指定版本

@@ -10,7 +10,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { usePageData } from "@vuepress/client";
-import { insertLinkIcon, insertTableWrapper } from '../../../utils';
+import { insertLinkIcon, insertTableWrapper } from '@docs/.vuepress/utils';
 const page = usePageData();
 const hasHeader = computed(() => {
   return page.value && page.value.headers

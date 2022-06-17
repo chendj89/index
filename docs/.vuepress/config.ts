@@ -64,6 +64,9 @@ export default defineUserConfig({
   bundler: viteBundler({
     // vite配置
     viteOptions: {
+      alias: {
+        "@docs": path.resolve(__dirname, "./docs"),
+      },
       // 配置icon
       plugins: [
         Components({

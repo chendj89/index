@@ -14,14 +14,14 @@
 const StringReplacePlugin = require("string-replace-loader");
 // 相应的打包工具中使用工具
 chainWebpack(config, isServer) {
-    config.module
-      .rule("strReplace")
-      .test(/\.vue$/)
-      .use("tring-replace-loader")
-      .loader("string-replace-loader")
-      .options({
-        search: "/deep/",
-        replace: "::v-deep",
-      });
-  }
+  config.module
+    .rule("strReplace")
+    .test(/\.vue$/)
+    .use("tring-replace-loader")
+    .loader("string-replace-loader")
+    .options({
+      search: "/deep/",
+      replace: "::v-deep",
+    });
+}
 ```

@@ -1,6 +1,7 @@
 import path from "path";
 import { defineUserConfig } from "@vuepress/cli";
 import { viteBundler } from "@vuepress/bundler-vite";
+import { visualizer } from "rollup-plugin-visualizer";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
@@ -82,6 +83,11 @@ export default defineUserConfig({
           include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         }),
         Icons({ compiler: "vue3", autoInstall: true }),
+        visualizer({
+          open: true,
+          brotliSize: true,
+          filename: "report.html",
+        }),
       ],
       css: {
         // 开启sourcemap 有利于定位

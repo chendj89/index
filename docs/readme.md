@@ -16,9 +16,3 @@ button/basic
 
 :::
 
-## a-table
-:::demo 使用 `<a-table>` 添加表格边框线，页头和页脚。
-
-table/basic
-
-:::

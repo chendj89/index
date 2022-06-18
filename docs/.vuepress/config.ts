@@ -16,10 +16,12 @@ export default defineUserConfig({
   theme: chenccTheme({
     // 默认主题配置项
   }),
+  // md文档中的别名
   alias: {
     "@docs": path.resolve(__dirname, ".."),
     "@public": path.join(__dirname, "/public"),
   },
+
   // md配置
   markdown: {
     importCode: {
@@ -64,8 +66,11 @@ export default defineUserConfig({
   bundler: viteBundler({
     // vite配置
     viteOptions: {
-      alias: {
-        "@docs": path.resolve(__dirname, "./docs"),
+      resolve: {
+        alias: {
+          // 代码中的别名
+          "@docs": path.resolve(__dirname, "./docs"),
+        },
       },
       // 配置icon
       plugins: [

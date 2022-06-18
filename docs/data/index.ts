@@ -32,6 +32,10 @@ let good = reactive([
     title: "cnpm",
     link: "https://npmmirror.com/",
   },
+  {
+    title: "华为镜像",
+    link: "https://mirrors.huaweicloud.com/",
+  },
 ]);
 let interest = reactive({
   title: "Five动漫",

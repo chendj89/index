@@ -24,6 +24,10 @@ let sidebars = [
         "link": "/studio/webpack",
         "text": "webpack"
       },
+      {
+        "link": "/studio/data",
+        "text": "data"
+      },
     ]
   }
 ]

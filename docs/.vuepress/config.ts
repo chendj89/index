@@ -83,11 +83,11 @@ export default defineUserConfig({
           include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         }),
         Icons({ compiler: "vue3", autoInstall: true }),
-        visualizer({
-          open: true,
-          brotliSize: true,
-          filename: "report.html",
-        }),
+        // visualizer({
+        //   open: true,
+        //   brotliSize: true,
+        //   filename: "report.html",
+        // }),
       ],
       css: {
         // 开启sourcemap 有利于定位

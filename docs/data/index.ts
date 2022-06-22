@@ -36,6 +36,10 @@ let good = reactive([
     title: "华为镜像",
     link: "https://mirrors.huaweicloud.com/",
   },
+  {
+    title: "tldraw",
+    link: "https://www.tldraw.com/",
+  },
 ]);
 let interest = reactive({
   title: "Five动漫",

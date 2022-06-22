@@ -20,6 +20,8 @@ defineProps<{
 .social-link {
   display: inline-block;
   line-height: 1.7;
+  height: 24px;
   color: var(--text-color);
+  margin-left: 10px;
 }
 </style>

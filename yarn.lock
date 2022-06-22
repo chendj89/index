@@ -74,6 +74,13 @@
   dependencies:
     "@floating-ui/core" "^0.7.2"
 
+"@iconify-json/ci@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify-json/ci/-/ci-1.1.1.tgz#13b867a208612e7a611addc67de7fbc7657c5b55"
+  integrity sha512-ne63Km3073skNaVB++Gvd6Pll0c5ZGf1dpBIoUVL1aoUqE/V5e/CoXvkPOj8EtE+AnaYlRM1/JaRSJqL6tSkrQ==
+  dependencies:
+    "@iconify/types" "^1.0.12"
+
 "@iconify-json/ri@^1.1.2":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@iconify-json/ri/-/ri-1.1.2.tgz#46b19e3ed89e0228bc63b2a2147949fc303ebba0"
@@ -81,7 +88,7 @@
   dependencies:
     "@iconify/types" "^1.1.0"
 
-"@iconify/types@^1.1.0":
+"@iconify/types@^1.0.12", "@iconify/types@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@iconify/types/-/types-1.1.0.tgz#dc15fc988b1b3fd558dd140a24ede7e0aac11280"
   integrity sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==

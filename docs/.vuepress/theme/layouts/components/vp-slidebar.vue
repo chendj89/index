@@ -28,6 +28,10 @@ let sidebars = [
         "link": "/studio/data",
         "text": "data"
       },
+      {
+        "link": "/studio/elementPlus",
+        "text": "element"
+      },
     ]
   }
 ]

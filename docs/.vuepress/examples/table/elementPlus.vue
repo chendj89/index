@@ -9,7 +9,12 @@
     :summary-method="myFunc1()"
     :span-method="myFunc2()"
   >
-    <el-table-column type="index" width="80" align="center" fixed></el-table-column>
+    <el-table-column
+      type="index"
+      width="80"
+      align="center"
+      fixed
+    ></el-table-column>
     <el-table-column
       prop="name"
       label="姓名"
@@ -68,7 +73,15 @@ import {
   tableSpanMethod,
   getGroupArrByName,
 } from "@docs/.vuepress/utils/table";
-const dataList = [
+interface DataList {
+  date: string;
+  name: string;
+  address: string;
+  num: number;
+  num2: number;
+  num3: number;
+}
+const dataList: DataList[] = [
   {
     date: "2016-05-03",
     name: "王小虎01",
@@ -131,7 +144,7 @@ let { newArr, rowArr } = getGroupArrByName(dataList, "name");
 const myFunc1 = () => {
   return tableSummary({
     rowArr,
-    rowName:['num']
+    rowName: ["num"],
   });
 };
 const myFunc2 = () => {

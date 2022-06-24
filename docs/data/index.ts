@@ -40,6 +40,10 @@ let good = reactive([
     title: "tldraw",
     link: "https://www.tldraw.com/",
   },
+  {
+    title:"一篇让你完全够用TS的指南",
+    link:"https://juejin.cn/post/7088304364078497800"
+  }
 ]);
 let interest = reactive({
   title: "Five动漫",

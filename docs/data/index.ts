@@ -50,6 +50,11 @@ let interest = reactive({
   link: "https://www.fivedongman.com/",
 });
 
+let work=reactive({
+  title:"软2",
+  link:"http://www.xmsoft.com/pzt/fg/index.html?parkCd=02"
+});
+
 export default {
   blog,
   code,

@@ -13,7 +13,7 @@ export default defineUserConfig({
   base: process.env.NODE_ENV !== "production" ? "/" : "/index/",
   lang: "zh-CN",
   title: "文档",
-  port:9090,
+  port: 9090,
   // 自定义主题
   theme: chenccTheme({
     // 默认主题配置项

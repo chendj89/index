@@ -19,14 +19,17 @@
 
 <script setup lang="ts">
 import { ref, reactive, computed, onMounted } from "vue";
-let ele = ref<any>(null);
+let ele = ref<HTMLElement>();
 const example = reactive({
   content: "威威威威维瓦尔啊打发打发十大地方啊",
   active: false,
   hide: false,
 });
 onMounted(() => {
-  example.hide = ele.value.offsetWidth > ele.value.scrollWidth;
+  console.log(ele.value?.offsetWidth);
+  if (ele.value) {
+    example.hide = ele.value?.offsetWidth > ele.value?.scrollWidth;
+  }
 });
 let toogleClass = () => {
   example.active = !example.active;

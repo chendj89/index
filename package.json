@@ -23,12 +23,15 @@
     "@vuepress/plugin-register-components": "^2.0.0-beta.47",
     "@vueuse/core": "^8.6.0",
     "ant-design-vue": "^3.2.6",
+    "axios": "^0.27.2",
     "element-plus": "^2.2.5",
     "escape-html": "^1.0.3",
     "js-beautify": "^1.14.3",
+    "mockjs": "^1.1.0",
     "prism-theme-vars": "^0.2.3",
     "unocss": "^0.38.2",
     "unplugin-icons": "^0.14.3",
-    "unplugin-vue-components": "^0.19.6"
+    "unplugin-vue-components": "^0.19.6",
+    "vite-plugin-mock": "^2.9.6"
   }
 }

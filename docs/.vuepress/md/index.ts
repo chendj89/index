@@ -33,7 +33,6 @@ export const mdPlugin = (md: MarkdownIt) => {
         const sourceFileToken = tokens[idx + 2];
         let source = "";
         let sourceFile = sourceFileToken.children?.[0].content ?? "";
-
         if (sourceFileToken.type === "inline") {
           source = fs.readFileSync(
             path.resolve(__dirname, "../examples", `${sourceFile}.vue`),
@@ -43,6 +42,8 @@ export const mdPlugin = (md: MarkdownIt) => {
         if (sourceFile.includes("/")) {
           sourceFile = sourceFile.replace("/", "-");
         }
+        console.log(sourceFile);
+
         if (!source) throw new Error(`Incorrect source file: ${sourceFile}`);
         return `<vp-container source="${encodeURIComponent(
           highlight(source, "vue")

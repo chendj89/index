@@ -1,153 +1,48 @@
 <template>
-  <el-table
-    ref="mainTable"
-    :data="newArr"
-    border
-    tooltip-effect="dark"
-    style="width: 100%"
-    show-summary
-    :summary-method="myFunc1()"
-    :span-method="myFunc2()"
-  >
-    <el-table-column
-      type="index"
-      width="80"
-      align="center"
-      fixed
-    ></el-table-column>
-    <el-table-column
-      prop="name"
-      label="姓名"
-      width="120"
-      fixed
-    ></el-table-column>
-    <el-table-column
-      prop="num"
-      label="数量"
-      width="80"
-      show-overflow-tooltip
-      fixed
-    ></el-table-column>
-    <el-table-column
-      prop="num2"
-      width="80"
-      label="数量2"
-      show-overflow-tooltip
-    ></el-table-column>
-    <el-table-column
-      prop="num3"
-      width="80"
-      label="数量3"
-      show-overflow-tooltip
-    ></el-table-column>
-    <el-table-column
-      prop="address"
-      width="200"
-      label="地址"
-      show-overflow-tooltip
-    ></el-table-column>
-    <el-table-column
-      prop="address"
-      width="200"
-      label="地址"
-      show-overflow-tooltip
-    ></el-table-column>
-    <el-table-column
-      prop="address"
-      width="200"
-      label="地址"
-      show-overflow-tooltip
-    ></el-table-column>
-    <el-table-column
-      prop="address"
-      width="200"
-      label="地址"
-      show-overflow-tooltip
-    ></el-table-column>
+  <el-button style="margin-bottom:10px" color="#626aef" @click="reloadTable">重新加载</el-button>
+  <el-table ref="mainTable" :data="dataList" border tooltip-effect="dark" style="width: 100%" height="440"
+    highlight-current-row v-loading="loading">
+    <el-table-column type="index" align="center"></el-table-column>
+    <el-table-column prop="name" label="姓名" align="center"></el-table-column>
+    <el-table-column prop="date" label="日期" show-overflow-tooltip></el-table-column>
+    <el-table-column prop="age" label="年纪" show-overflow-tooltip></el-table-column>
+    <el-table-column prop="num" label="年薪" show-overflow-tooltip></el-table-column>
+    <el-table-column prop="city" label="城市" show-overflow-tooltip></el-table-column>
   </el-table>
+
 </template>
 
 <script lang="ts" setup>
-import {
-  tableSummary,
-  tableSpanMethod,
-  getGroupArrByName,
-} from "@docs/.vuepress/utils/table";
+import axios from "axios";
+import { ref } from "vue";
 interface DataList {
-  date: string;
-  name: string;
-  address: string;
-  num: number;
-  num2: number;
-  num3: number;
+  name: string,
+  date: string,
+  city: string,
+  age: number,
+  num: number
 }
-const dataList: DataList[] = [
-  {
-    date: "2016-05-03",
-    name: "王小虎01",
-    address: "上海市普陀区金沙江路 1518 弄",
-    num: 1,
-    num2: 3,
-    num3: 4,
-  },
-  {
-    date: "2016-05-02",
-    name: "王小虎01",
-    address: "上海市普陀区金沙江路 1518 弄",
-    num: 1,
-    num2: 3,
-    num3: 4,
-  },
-  {
-    date: "2016-05-04",
-    name: "王小虎02",
-    address: "上海市普陀区金沙江路 1518 弄",
-    num: 1,
-    num2: 3,
-    num3: 4,
-  },
-  {
-    date: "2016-05-01",
-    name: "王小虎02",
-    address: "上海市普陀区金沙江路 1518 弄",
-    num: 1,
-    num2: 3,
-    num3: 4,
-  },
-  {
-    date: "2016-05-08",
-    name: "王小虎03",
-    address: "上海市普陀区金沙江路 1518 弄",
-    num: 1,
-    num2: 3,
-    num3: 4,
-  },
-  {
-    date: "2016-05-06",
-    name: "王小虎03",
-    address: "上海市普陀区金沙江路 1518 弄",
-    num: 1,
-    num2: 3,
-    num3: 4,
-  },
-  {
-    date: "2016-05-07",
-    name: "王小虎03",
-    address: "上海市普陀区金沙江路 1518 弄",
-    num: 1,
-    num2: 3,
-    num3: 4,
-  },
-];
-let { newArr, rowArr } = getGroupArrByName(dataList, "name");
+const loading = ref(true)
+let dataList = ref<DataList[]>([])
 
-const myFunc1 = () => {
-  return tableSummary({
-    rowArr,
-    rowName: ["num"],
-  });
-};
-const myFunc2 = () => {
-  return tableSpanMethod([1, 2, 4], rowArr);
-};
+let getTable = () => {
+  axios.get("/api/ele/city").then(res => {
+    return res.data;
+  }).then(res => {
+    if (res.code == 0) {
+      dataList.value = res.data.list;
+    }
+  }).finally(() => {
+    loading.value = false
+  })
+}
+getTable();
+const reloadTable = () => {
+  if (!loading.value) {
+    loading.value = true;
+    getTable();
+  }
+
+}
+
 </script>

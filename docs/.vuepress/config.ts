@@ -9,6 +9,7 @@ import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 import { mdPlugin } from "./md";
 // 自定义主题
 import { chenccTheme } from "./theme";
+import { viteMockServe } from "vite-plugin-mock";
 export default defineUserConfig({
   base: process.env.NODE_ENV !== "production" ? "/" : "/index/",
   lang: "zh-CN",
@@ -84,11 +85,17 @@ export default defineUserConfig({
           include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         }),
         Icons({ compiler: "vue3", autoInstall: true }),
+        // 分析包
         // visualizer({
         //   open: true,
         //   brotliSize: true,
         //   filename: "report.html",
         // }),
+        viteMockServe({
+          // https://github.com/vbenjs/vite-plugin-mock/blob/HEAD/README.zh_CN.md
+          mockPath: "./docs/.vuepress/mock",
+          localEnabled: true,
+        }),
       ],
       css: {
         // 开启sourcemap 有利于定位

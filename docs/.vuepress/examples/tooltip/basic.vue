@@ -1,16 +1,7 @@
 <template>
   <div>
-    <el-tooltip
-      effect="dark"
-      :content="example.content"
-      placement="top"
-      :disabled="example.hide"
-    >
-      <div
-        @click="toogleClass"
-        ref="ele"
-        :class="['example', { active: example.active }]"
-      >
+    <el-tooltip effect="dark" :content="example.content" placement="top" :disabled="example.hide">
+      <div @click="toogleClass" ref="ele" :class="['example', { active: example.active }]">
         {{ example.content }}
       </div>
     </el-tooltip>
@@ -18,6 +9,7 @@
 </template>
 
 <script setup lang="ts">
+
 import { ref, reactive, computed, onMounted } from "vue";
 let ele = ref<HTMLElement>();
 const example = reactive({
@@ -30,6 +22,7 @@ onMounted(() => {
   if (ele.value) {
     example.hide = ele.value?.offsetWidth > ele.value?.scrollWidth;
   }
+
 });
 let toogleClass = () => {
   example.active = !example.active;
@@ -44,6 +37,7 @@ let toogleClass = () => {
   background: #fff;
   border-radius: 4px;
   cursor: pointer;
+
   // width: 120px;
   &.active {
     width: 120px;

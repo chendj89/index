@@ -1,0 +1,1 @@
+import{_ as p,f as t,r as e,o as _,c,a as o,s as r}from"./app.8bd6da0a.js";const v={class:"app"},l=t({__name:"vp-app",setup(m){return(i,d)=>{const s=e("vp-nav"),a=e("vp-slidebar"),n=e("vp-content");return _(),c("div",v,[o(s),o(a),o(n,{class:r({"has-sidebar":!0})})])}}});var u=p(l,[["__file","vp-app.vue"]]);export{u as default};

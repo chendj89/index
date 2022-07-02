@@ -1,0 +1,1 @@
+import{_ as a,r,o as s,c as n,a as o,s as t}from"./app.8bd6da0a.js";const c={},_={class:t({navbar:!0,"has-sidebar":!0})};function v(p,l){const e=r("vp-navbar");return s(),n("header",_,[o(e)])}var f=a(c,[["render",v],["__file","vp-nav.vue"]]);export{f as default};

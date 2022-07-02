@@ -1,0 +1,1 @@
+const t={key:"v-4aaf3800",path:"/studio/icon.html",title:"Vue3\uFF01ElementPlus\uFF01\u66F4\u52A0\u4F18\u96C5\u7684\u4F7F\u7528Icon",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[],git:{updatedTime:1655905934e3,contributors:[{name:"chendj89",email:"chendj89@hotmail.com",commits:2}]},filePathRelative:"studio/icon.md"};export{t as data};

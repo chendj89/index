@@ -1,0 +1,1 @@
+const e={key:"v-5ea4fd8c",path:"/studio/webpack.html",title:"",lang:"zh-CN",frontmatter:{},excerpt:"",headers:[{level:2,title:"\u914D\u7F6Ewebpack",slug:"\u914D\u7F6Ewebpack",children:[]}],git:{updatedTime:1655546624e3,contributors:[{name:"chendj89",email:"chendj89@hotmail.com",commits:4}]},filePathRelative:"studio/webpack.md"};export{e as data};

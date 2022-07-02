@@ -1,0 +1,1 @@
+import{_ as n,r as o,o as t,c,a as _}from"./app.8bd6da0a.js";const a={},s={class:"page-content"};function r(p,d){const e=o("vp-doc-content");return t(),c("main",s,[_(e)])}var l=n(a,[["render",r],["__file","vp-content.vue"]]);export{l as default};
